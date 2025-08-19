@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<link rel="stylesheet" href="WC.css">  
+    <h1 class="title">Word Cloud Generator</h1>
+    <meta name="viewport" content="width=device-width">
+  </head>
+
+  <div class="wrap">
+    <nav>
+      <ul class="primary">
+        <li>
+          <a>Color</a>
+          <ul class="sub">
+            <div class="Color">
+              <li><a><input type="checkbox" value="red" checked="true">Red</input></a></li>
+              <li><a><input type="checkbox" value="green">Green</input></a></li>
+              <li><a><input type="checkbox" value="blue">Blue</input></a></li>
+            </div>
+          </ul>
+        </li>
+        <li>
+          <a>Font</a>
+          <ul class="sub">
+            <div class="Font">
+              <li><a><input type="checkbox" value="Arial" checked="true">Arial</input></a></li>
+              <li><a><input type="checkbox" value="Times New Roman">Times New Roman</input></a></li>
+              <li><a><input type="checkbox" value="Courier New ">Courier New </input></a></li>
+              <li><a><input type="checkbox" value="Brush Script MT">Brush Script MT</input></a></li>
+            </div>
+          </ul>  
+        </li>
+        <li>
+          <a>Image</a>
+          <ul class="sub">
+            <li><a onClick="starFcn()">Star</a></li>
+            <li><a onClick="bottleFcn()">Bottle</a></li>
+            <li><a onClick="sncFcn()">SNC</a></li>
+          </ul>  
+        </li>
+        <li>
+          <a>Font Size</a>
+          <ul class="sub">
+            <div class="Size">  
+              <li><a>Min Font Size<input type="text" size="10" style="align-self: center;" id="min"></input></a></li>
+              <li><a>Max Font Size<input type="text" size="10" style="align-self: center;" id="max"></input></a></li>
+            </div>
+          </ul>  
+        </li>
+        <li>
+          <a onClick="clearScreen()">Clear Screen</a>
+        </li>
+        <li>
+          <a onClick="submit()">Generate Word Cloud</a>
+        </li>
+        <li>
+          <a onClick="downloadCanvas()">Download Image</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="container">
+    <textarea id="inputText" rows="6" cols="50" placeholder="Enter your text..."></textarea>
+    <canvas id="myCanvas" width="800" height="500"></canvas>
+  </div>
+  
+  <script src="WC.js"></script>
+</body>
+</html>
